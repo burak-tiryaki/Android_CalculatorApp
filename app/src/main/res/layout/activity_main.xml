@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextIkinci"
+        android:layout_width="match_parent"
+        android:layout_height="48sp"
+        android:layout_marginTop="53dp"
+        android:ems="10"
+        android:hint="2. Sayıyı Giriniz"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBirinci" />
+
+    <EditText
+        android:id="@+id/editTextBirinci"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:ems="10"
+        android:hint="1. Sayıyı Giriniz"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnTopla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:onClick="btnHesapla"
+        android:text="+"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnCikar"
+        app:layout_constraintEnd_toStartOf="@+id/btnCikar"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCarp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:onClick="btnHesapla"
+        android:text="X"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnBol"
+        app:layout_constraintStart_toEndOf="@+id/btnCikar"
+        app:layout_constraintTop_toBottomOf="@+id/editTextIkinci" />
+
+    <Button
+        android:id="@+id/btnBol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btnHesapla"
+        android:text="/"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnCarp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCarp" />
+
+    <Button
+        android:id="@+id/btnCikar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:onClick="btnHesapla"
+        android:text="-"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btnCarp"
+        app:layout_constraintStart_toEndOf="@+id/btnTopla"
+        app:layout_constraintTop_toTopOf="@+id/btnCarp" />
+
+    <TextView
+        android:id="@+id/textViewSonuc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sonuç"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCikar"
+        app:layout_constraintVertical_bias="0.136" />
+</androidx.constraintlayout.widget.ConstraintLayout>
